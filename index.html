@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
-    <link href="/styles/main.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header role="banner">
-      <h1>Welcome to my Website!</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link href="/styles/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header role="banner">
+       <div>About</div>
+       <div>Skills</div>
+       <div>Portfolio</div>
+       <div>Contact & Links</div>
     </header>
-    <main>
-      <p>This is a paragraph.</p>
-      <a href="/elements.html">Elements Page</a>
-
-      <div class="counter">
-        <h2>Counter</h2>
-        <button id="increment" class="counter-button">+</button>
-        <button id="decrement" class="counter-button">−</button>
-        <span id="count">0</span>
+  <main>
+    <section id=intro>
+      <div>>Hi! I'm Benny</div>
+      <div>>Computer Science student @HUJI</div>
+      <div>>
+        <a href="#projects">Projects</a> ·
+        <a href="#contact">Contact</a> ·
+        <a href="/Benjamin_Berg_CV.pdf" download>CV</a>
       </div>
-    </main>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+    </section>
+    <section id=about>
+      <div>>Final-year Computer Science student at Hebrew University with hands-
+        on experience in Python, C++, SQL, and machine learning. Skilled in
+        computer vision, data analysis, and software development through
+        hackathons, academic projects, and collaborative team work. Trilingual
+        with strong problem-solving and communication skills.</div>
+    </section>
+    <section id=skills>
+      <div> class="skills-box">Languages: Python, C, C++, Java, SQL, JavaScript, HTML, CSS</div>
+      <div> class="skills-box">Tools: Git, Linux, ArcGIS</div>
+      <div> class="skills-box">Libraries & Frameworks: NumPy, Pandas, Scikit-learn,
+        OpenCV</div>
+      <div> class="skills-box">Areas of Experience: Machine Learning, Computer Vision,
+        Data Processing, Software Design, UI Development</div>
+
+    </section>
+
+    <section id=portfolio>
+      <div>>Paper Rock Scissors</div>
+      <div>>Etch-a-sketch</div>
+    </section>
+    <section id=contact>
+      <div>Email</div>
+      <div>Linkedin</div>
+      <div>Git</div>
+    </section>
+
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
