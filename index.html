@@ -11,16 +11,18 @@
 
 <body>
   <header role="banner">
-       <div>About</div>
-       <div>Skills</div>
-       <div>Portfolio</div>
-       <div>Contact & Links</div>
-    </header>
+    <a>Benajmin Berg</a>
+    <a>About</a>
+    <a>Skills</a>
+    <a>Portfolio</a>
+    <a>Contact & Links</a>
+  </header>
   <main>
     <section id=intro>
-      <div>>Hi! I'm Benny</div>
-      <div>>Computer Science student @HUJI</div>
-      <div>>
+      <!-- <div>Hi! I'm Benny</div> -->
+      <h1>Hi! I'm Benny</h1>
+      <p>Computer Science student @HUJI</p>
+      <div>
         <a href="#projects">Projects</a> ·
         <a href="#contact">Contact</a> ·
         <a href="/Benjamin_Berg_CV.pdf" download>CV</a>
@@ -28,30 +30,58 @@
 
     </section>
     <section id=about>
-      <div>>Final-year Computer Science student at Hebrew University with hands-
+      <h2>About</h2>
+      <div>Final-year Computer Science student at Hebrew University with hands-
         on experience in Python, C++, SQL, and machine learning. Skilled in
         computer vision, data analysis, and software development through
         hackathons, academic projects, and collaborative team work. Trilingual
         with strong problem-solving and communication skills.</div>
     </section>
     <section id=skills>
-      <div> class="skills-box">Languages: Python, C, C++, Java, SQL, JavaScript, HTML, CSS</div>
-      <div> class="skills-box">Tools: Git, Linux, ArcGIS</div>
-      <div> class="skills-box">Libraries & Frameworks: NumPy, Pandas, Scikit-learn,
-        OpenCV</div>
-      <div> class="skills-box">Areas of Experience: Machine Learning, Computer Vision,
-        Data Processing, Software Design, UI Development</div>
+      <h2>Skills</h2>
+      <div id="skills-container">
+        <div class="skills-box">
+          <h3>Languages</h3>
+          <p>Python, C, C++, Java, SQL, JavaScript, HTML, CSS</p>
+        </div>
+        <div class="skills-box">
+          <h3>Tools</h3>
+
+          <p>Git, Linux, ArcGIS</p>
+        </div>
+        <div class="skills-box">
+          <h3>Libraries & Frameworks</h3>
+          <p>NumPy, Pandas, Scikit-learn,
+            OpenCV</p>
+        </div>
+        <div class="skills-box">
+          <h3>Areas of Experience</h3>
+          <p>Machine Learning, Computer Vision,
+            Data Processing, Software Design, UI Development</p>
+        </div>
+      </div>
+
 
     </section>
 
     <section id=portfolio>
-      <div>>Paper Rock Scissors</div>
-      <div>>Etch-a-sketch</div>
+      <h2>Portfolio</h2>
+      <div id="portfolio-container">
+        <div class="portfolio-box">
+          <h3>Paper Rock Scissors</h3>
+        </div>
+        <div class="portfolio-box">
+          <h3>Etch-A-Sketch</h3>
+        </div>
+      </div>
+      </div>
     </section>
     <section id=contact>
-      <div>Email</div>
-      <div>Linkedin</div>
-      <div>Git</div>
+      <h2>Contact</h2>
+
+      <a>Email</a>
+      <a>Linkedin</a>
+      <a>Git</a>
     </section>
 
   </main>

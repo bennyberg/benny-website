@@ -20,46 +20,55 @@ body {
   color: var(--color-primary);
   background-color: var(--color-background);
   font-family: var(--font-body);
+
+  display: flex;
+  flex-direction: column;
 }
 
-/* Layout */
-main {
-  padding: 2rem;
+header{
+  /* background-color: var(--color-secondary); */
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  margin-bottom: 0;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
 }
 
-header {
+section{
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-main,
-header,
-nav {
-  max-width: 60rem;
-  margin: 0 auto;
+/* #skills{
+  display: flex;
+} */
+
+#skills-container{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+
 }
 
-article,
-nav {
-  padding: 1rem 0;
+.skills-box{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 1rem;
+  border-width: 2px;
+  padding-left: 1rem;
+  width: 12rem;
+  /* height: 10rem; */
+  /* flex-wrap: wrap; */
+
 }
 
-.rtl {
-  direction: rtl;
-}
-
-/* Text */
-p {
-  margin: 1rem 0;
-}
-
-ul,
-ol {
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-top: 0.3rem;
-}
 
 h1,
 h2,
@@ -97,62 +106,3 @@ h6 {
   font-size: 0.83em;
 }
 
-blockquote {
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-secondary);
-}
-
-/* Links */
-a {
-  color: var(--color-accent);
-  text-decoration: underline;
-}
-a:hover {
-  text-decoration: none;
-}
-
-/* Tables */
-table {
-  margin-top: 1.5rem;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-table td,
-table th {
-  padding: 0.5rem;
-  border: 1px solid var(--color-secondary);
-}
-
-/* Forms */
-input,
-button,
-textarea,
-select {
-  padding: 0.2em 0.5em;
-  border: 1px solid var(--color-secondary);
-  border-radius: var(--border-radius);
-}
-
-fieldset {
-  margin-top: 1.5rem;
-  border: 1px solid var(--color-secondary);
-}
-
-.counter-button {
-  background-color: var(--color-accent);
-  width: 2rem;
-  height: 2rem;
-  color: white;
-  border: none;
-  border-radius: 1000px; /* Make the button round */
-  cursor: pointer;
-  font-weight: bold;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-
-  &:active {
-    filter: brightness(80%);
-  }
-}
