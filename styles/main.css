@@ -50,6 +50,8 @@ header {
   border-bottom: 1px solid #040406;
   background-color: var(--color-header);
   /* color: #0000ff; */
+  padding-left: 20rem;
+  padding-right: 20rem;
 }
 
 #link-container {
@@ -63,6 +65,8 @@ main {
   display: flex;
   flex-direction: column;
   margin: 2rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
 section {
@@ -134,12 +138,14 @@ section {
   transition: width 240ms ease;
   transition: background-color 200ms ease;
 
-  
+
 }
-.project-box:hover{
+
+.project-box:hover {
   background-color: rgb(227, 192, 76);
- ;
+  ;
 }
+
 .project-box.is-expanded {
   width: 30rem;
   /* grow horizontally */
@@ -292,4 +298,3 @@ h5 {
 h6 {
   font-size: 0.83em;
 }
-
