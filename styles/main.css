@@ -16,7 +16,7 @@
   --color-secondary: #eaeaea;
   --color-background: #eaeaea;
   --color-header: #4f6d7a;
-  --color-box: #e8dab2 ;
+  --color-box: #e8dab2;
 
   --color-accent: #040406;
 
@@ -24,7 +24,8 @@
   --border-radius: 0.5rem;
 
   --font-titles: "Frank Ruhl Libre", serif;
-  --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
+  --font-body: system-ui, sans-serif;
+  /* system-ui matches the user's system font */
 }
 
 body {
@@ -36,7 +37,7 @@ body {
   flex-direction: column;
 }
 
-header{
+header {
   /* background-color: var(--color-secondary); */
   display: flex;
   justify-content: space-between;
@@ -46,39 +47,39 @@ header{
   padding-top: 1rem;
   padding-bottom: 1rem;
   gap: 3rem;
-  border-bottom:1px solid #040406;
+  border-bottom: 1px solid #040406;
   background-color: var(--color-header);
   /* color: #0000ff; */
 }
 
-#link-container{
+#link-container {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
   gap: 6rem;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   margin: 2rem;
 }
 
-section{
+section {
   padding: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 
-#skills-container{
+#skills-container {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.skills-box{
+.skills-box {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -93,13 +94,24 @@ section{
   background-color: var(--color-box);
 }
 
-#portfolio-container{
+#project-container {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 10rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
-.portfolio-box{
+#portfolio-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* justify-content: space-between; */
+}
+
+.project-box,
+.portfolio-box {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -107,32 +119,111 @@ section{
   padding: 0.5rem;
   gap: 1rem;
   background-color: var(--color-box);
-
 }
 
-button{
+.project-box{
+  width: 15rem;
+  transition: width 240ms ease, box-shadow 180ms ease;
+}
+
+.project-box.is-expanded {
+  width: 30rem;        /* grow horizontally */
+
+}.project-box.is-expanded .thumb-img {
+  width: 100%;                      /* fill expanded card */
+  height: auto;
+}
+
+.link-btn {
+  border: 1px solid black;
+  color: black;
+  background-color: var(--color-secondary);
   border-radius: 1rem;
   padding: 0.5rem;
+  cursor: pointer;
+  /* Mouse pointer on hover */
+
 }
 
-img{
+.link-btn:hover {
+  background-color: #e7ad99;
+}
+
+.btn-link {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--color-primary); */
+  color: var(--color-secondary);
+
+}
+
+.full-img {
   border-radius: 1rem;
   border: 1px solid black;
   width: 25rem;
 
 }
 
-#contact-container{
+.thumb-img {
+  transition: width 180ms ease, height 180ms ease, transform 180ms ease;
+  border-radius: 1rem;
+  border: 1px solid black;
+  width: 15rem;
+  height: auto;
+}
+
+/* when the card is expanded */
+.project-box.is-expanded .thumb-img {
+  width: 25rem;
+  height: auto;
+}
+
+
+
+/* hidden by default, with smooth reveal */
+.project-details {
+  overflow: hidden;                 /* keeps the collapse tidy */
+  max-height: 0;                    /* collapsed */
+  opacity: 0;
+  padding-top: 0;                   /* no padding when collapsed */
+  transition:
+    max-height 240ms ease,
+    opacity 180ms ease,
+    padding-top 180ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;                      /* space between <p> and links */}
+
+/* show when card is expanded */
+.project-box.is-expanded .project-details {
+  /* padding-top: 1rem; */
+  max-height: 30rem;
+  /* big enough to fit the content */
+  opacity: 1;
+}
+
+.link-btn-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;                  
+  margin-top: 0.1rem;
+}
+
+
+#contact-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
-  border-top:1px solid #040406;
+  border-top: 1px solid #040406;
   padding: 1rem;
   background-color: var(--color-header);
   color: var(--color-secondary)
@@ -172,10 +263,4 @@ h5 {
 
 h6 {
   font-size: 0.83em;
-}
-
-a{
-  text-decoration: none;
-  /* color: var(--color-primary); */
-  color: var(--color-secondary);
 }

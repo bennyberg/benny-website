@@ -1,19 +1,31 @@
-console.log("Hello World!");
-setupCounter();
+document.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.project-box');
 
-function setupCounter() {
-  let count = 0;
+  boxes.forEach((box) => {
+    // // Make the whole card keyboard-activatable like a button
+    // box.setAttribute('tabindex', '0');
+    // box.setAttribute('role', 'button');
+    // box.setAttribute('aria-expanded', 'false');
 
-  function increment() {
-    count++;
-    document.querySelector("#count").innerHTML = count;
-  }
+    // in your existing toggle() inside main.js
+    const toggle = () => {
+      const img = box.querySelector('.thumb-img');
+      if (!img) return;
 
-  function decrement() {
-    count--;
-    document.querySelector("#count").innerHTML = count;
-  }
+      const expanded = box.classList.toggle('is-expanded');
+      box.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 
-  document.querySelector("#increment").addEventListener("click", increment);
-  document.querySelector("#decrement").addEventListener("click", decrement);
-}
+      // A11y: hide/reveal details for screen readers & tab order
+      const details = box.querySelector('.project-details');
+      const links = details ? details.querySelectorAll('a, button') : [];
+      if (details) details.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+      links.forEach(el => el.tabIndex = expanded ? 0 : -1);
+    };
+    // Click anywhere in the card EXCEPT links/buttons
+    box.addEventListener('click', (e) => {
+      if (e.target.closest('a, button')) return; // let links/buttons work normally
+      toggle();
+    });
+
+  });
+});

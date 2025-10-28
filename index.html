@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Website</title>
   <link href="/styles/main.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <div id="link-container">
       <a class="header-link" href="#about">About</a>
       <a class="header-link" href="#skills">Skills</a>
-      <a class="header-link" href="#portfolio">Portfolio</a>
+      <a class="header-link" href="#portfolio">Projects</a>
       <a class="header-link" href="#contact">Contact & Links</a>
     </div>
   </header>
@@ -29,7 +30,6 @@
         <button class="left-btn" type="button">See Portfolio</button>
         <button class="right-btn" type="button">Contact Me</button>
       </div>
-
 
     </section>
     <section id=about>
@@ -64,24 +64,33 @@
         </div>
       </div>
 
-
     </section>
 
-    <section id=portfolio>
-      <h2>Portfolio</h2>
-      <div id="portfolio-container">
-        <div class="portfolio-box">
+    <section id=projects>
+      <h2>Projects</h2>
+      <div id="project-container">
+        <div class="project-box">
           <h3>Paper Rock Scissors</h3>
-          <img src="/images/rock-paper-scissors.png" alt="Rock Paper Scissors">
-          <p>Play Rock Paper Scissors against the computer! Implemented with HTML, CSS and JavaScript.</p>
+          <img class="thumb-img" src="/images/rock-paper-scissors.png" alt="Rock Paper Scissors">
+          <div class="project-details" aria-hidden="true">
+
+            <p>Play Rock Paper Scissors against the computer! Implemented with HTML, CSS and JavaScript.</p>
+            <div class="link-btn-container">
+              <a href="" class="link-btn">Live Site</a>
+              <a href="" class="link-btn">Code</a>
+            </div>
+          </div>
+
         </div>
-        <div class="portfolio-box">
+        <div class="project-box">
           <h3>Etch-A-Sketch</h3>
-          <img src="/images/etch-a-sketch.png" alt="Etch-A-Sketch">
-          <p>Use your mouse to draw a picture! Implemented with HTML, CSS and JavaScript.</p>
-          <div class="btn-container">
-            <button class="left-btn" type="button">Live Site</button>
-            <button class="right-btn" type="button">Code</button>
+          <img class="thumb-img" src="/images/etch-a-sketch.png" alt="Etch-A-Sketch">
+          <div class="project-details" aria-hidden="true">
+            <p>Use your mouse to draw a picture! Implemented with HTML, CSS and JavaScript.</p>
+            <div class="link-btn-container">
+              <a href="" class="link-btn">Live Site</a>
+              <a href="" class="link-btn">Code</a>
+            </div>
           </div>
         </div>
       </div>
@@ -90,19 +99,20 @@
     <section id=contact>
       <h2>Contact & Links</h2>
       <div id="contact-container">
-        <button type="button">Email</button>
-        <button type="button">Linkedin</button>
-        <button type="button">Git</button>
+        <a class="link-btn" type="button"><i class="fa fa-envelope"></i> beni.berg1@gmail.com</a>
+        <a class="link-btn" type="button"><i class="fa fa-linkedin-square"></i>
+          linkedin.com/in/benjamin-berg</a>
+        <a class="link-btn" type="button"><i class="fa fa-github"></i> github.com/bennyberg</a>
       </div>
     </section>
 
   </main>
 
   <footer role="footer">
-    ©2025 Created by Benjamin Berg 
+    ©2025 Created by Benjamin Berg
   </footer>
 
-  <script type="module" src="/main.js"></script>
+  <script defer type="module" src="/main.js"></script>
 </body>
 
 </html>
