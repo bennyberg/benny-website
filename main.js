@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!img) return;
 
       const expanded = box.classList.toggle('is-expanded');
-      box.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      // box.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 
       // A11y: hide/reveal details for screen readers & tab order
-      const details = box.querySelector('.project-details');
-      const links = details ? details.querySelectorAll('a, button') : [];
-      if (details) details.setAttribute('aria-hidden', expanded ? 'false' : 'true');
-      links.forEach(el => el.tabIndex = expanded ? 0 : -1);
+      // const details = box.querySelector('.project-details');
+      // const links = details ? details.querySelectorAll('a, button') : [];
+      // if (details) details.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+      // links.forEach(el => el.tabIndex = expanded ? 0 : -1);
     };
     // Click anywhere in the card EXCEPT links/buttons
     box.addEventListener('click', (e) => {

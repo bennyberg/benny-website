@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <title>Benjamin Berg</title>
   <link href="/styles/main.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -18,17 +18,17 @@
     <div id="link-container">
       <a class="header-link" href="#about">About</a>
       <a class="header-link" href="#skills">Skills</a>
-      <a class="header-link" href="#portfolio">Projects</a>
+      <a class="header-link" href="#projects">Projects</a>
       <a class="header-link" href="#contact">Contact & Links</a>
     </div>
   </header>
   <main>
     <section id=intro>
       <h1>Hi! I'm Benny</h1>
-      <p>Computer Science student @HUJI</p>
-      <div class="btn-container">
-        <button class="left-btn" type="button">See Portfolio</button>
-        <button class="right-btn" type="button">Contact Me</button>
+      <p id="intro-text">Computer Science student @HUJI</p>
+      <div class="link-btn-container">
+        <a href="portfolio.html" class="link-btn">See Portfolio</a>
+        <a href="#contact" class="link-btn">Contact Me</a>
       </div>
 
     </section>
@@ -63,21 +63,19 @@
             Data Processing, Software Design, UI Development</p>
         </div>
       </div>
-
     </section>
-
     <section id=projects>
       <h2>Projects</h2>
+      <p>Click anywhere inside each project for more details.</p>
       <div id="project-container">
         <div class="project-box">
           <h3>Paper Rock Scissors</h3>
           <img class="thumb-img" src="/images/rock-paper-scissors.png" alt="Rock Paper Scissors">
-          <div class="project-details" aria-hidden="true">
-
+          <div class="project-details">
             <p>Play Rock Paper Scissors against the computer! Implemented with HTML, CSS and JavaScript.</p>
             <div class="link-btn-container">
-              <a href="" class="link-btn">Live Site</a>
-              <a href="" class="link-btn">Code</a>
+              <a href="https://bennyberg.github.io/rock-paper-scissors/" class="link-btn">Live Site</a>
+              <a href="https://github.com/bennyberg/rock-paper-scissors" class="link-btn">Code</a>
             </div>
           </div>
 
@@ -85,11 +83,11 @@
         <div class="project-box">
           <h3>Etch-A-Sketch</h3>
           <img class="thumb-img" src="/images/etch-a-sketch.png" alt="Etch-A-Sketch">
-          <div class="project-details" aria-hidden="true">
+          <div class="project-details">
             <p>Use your mouse to draw a picture! Implemented with HTML, CSS and JavaScript.</p>
             <div class="link-btn-container">
-              <a href="" class="link-btn">Live Site</a>
-              <a href="" class="link-btn">Code</a>
+              <a href="https://bennyberg.github.io/etch-a-sketch/" class="link-btn">Live Site</a>
+              <a href="https://github.com/bennyberg/etch-a-sketch" class="link-btn">Code</a>
             </div>
           </div>
         </div>
@@ -99,10 +97,10 @@
     <section id=contact>
       <h2>Contact & Links</h2>
       <div id="contact-container">
-        <a class="link-btn" type="button"><i class="fa fa-envelope"></i> beni.berg1@gmail.com</a>
-        <a class="link-btn" type="button"><i class="fa fa-linkedin-square"></i>
+        <a href="mailto:beni.berg1@gmail.com" class="link-btn"><i class="fa fa-envelope"></i> beni.berg1@gmail.com</a>
+        <a href="https://www.linkedin.com/in/benjamin-berg" class="link-btn"><i class="fa fa-linkedin-square"></i>
           linkedin.com/in/benjamin-berg</a>
-        <a class="link-btn" type="button"><i class="fa fa-github"></i> github.com/bennyberg</a>
+        <a href="https://github.com/bennyberg" class="link-btn"><i class="fa fa-github"></i> github.com/bennyberg</a>
       </div>
     </section>
 

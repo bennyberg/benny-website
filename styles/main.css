@@ -92,14 +92,22 @@ section {
   /* height: 10rem; */
   /* flex-wrap: wrap; */
   background-color: var(--color-box);
+  transition: background-color 200ms ease
 }
+
+.skills-box:hover {
+  background-color: rgb(227, 192, 76);
+}
+
+
 
 #project-container {
   display: flex;
   flex-direction: row;
-  gap: 10rem;
+  gap: 15rem;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 2rem;
 
 }
 
@@ -114,23 +122,33 @@ section {
 .portfolio-box {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 1rem;
   padding: 0.5rem;
   gap: 1rem;
   background-color: var(--color-box);
 }
 
-.project-box{
+.project-box {
   width: 15rem;
-  transition: width 240ms ease, box-shadow 180ms ease;
+  transition: width 240ms ease;
+  transition: background-color 200ms ease;
+
+  
+}
+.project-box:hover{
+  background-color: rgb(227, 192, 76);
+ ;
+}
+.project-box.is-expanded {
+  width: 30rem;
+  /* grow horizontally */
+
 }
 
-.project-box.is-expanded {
-  width: 30rem;        /* grow horizontally */
-
-}.project-box.is-expanded .thumb-img {
-  width: 100%;                      /* fill expanded card */
+.project-box.is-expanded .thumb-img {
+  width: 100%;
+  /* fill expanded card */
   height: auto;
 }
 
@@ -185,17 +203,22 @@ a {
 
 /* hidden by default, with smooth reveal */
 .project-details {
-  overflow: hidden;                 /* keeps the collapse tidy */
-  max-height: 0;                    /* collapsed */
+  overflow: hidden;
+  /* keeps the collapse tidy */
+  max-height: 0;
+  /* collapsed */
   opacity: 0;
-  padding-top: 0;                   /* no padding when collapsed */
+  padding-top: 0;
+  /* no padding when collapsed */
   transition:
     max-height 240ms ease,
     opacity 180ms ease,
     padding-top 180ms ease;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;                      /* space between <p> and links */}
+  gap: 0.6rem;
+  /* space between <p> and links */
+}
 
 /* show when card is expanded */
 .project-box.is-expanded .project-details {
@@ -208,7 +231,7 @@ a {
 .link-btn-container {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;                  
+  flex-wrap: wrap;
   margin-top: 0.1rem;
 }
 
@@ -218,6 +241,11 @@ a {
   flex-direction: column;
   gap: 0.5rem;
 
+}
+
+#intro-text {
+  font-size: large;
+  padding-bottom: 1rem;
 }
 
 footer {
@@ -264,3 +292,4 @@ h5 {
 h6 {
   font-size: 0.83em;
 }
+
