@@ -11,22 +11,20 @@
 
 <body>
   <header role="banner">
-    <a href="#intro">Benajmin Berg</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact & Links</a>
+    <div id="logo-container">
+      <a id="logo" href="#intro">Benajmin Berg</a>
+    </div>
+    <div id="link-container">
+      <a class="header-link" href="#about">About</a>
+      <a class="header-link" href="#skills">Skills</a>
+      <a class="header-link" href="#portfolio">Portfolio</a>
+      <a class="header-link" href="#contact">Contact & Links</a>
+    </div>
   </header>
   <main>
     <section id=intro>
-      <!-- <div>Hi! I'm Benny</div> -->
       <h1>Hi! I'm Benny</h1>
       <p>Computer Science student @HUJI</p>
-      <!-- <div>
-        <a href="#projects">Projects</a> ·
-        <a href="#contact">Contact</a> ·
-        <a href="/Benjamin_Berg_CV.pdf" download>CV</a>
-      </div> -->
       <div class="btn-container">
         <button class="left-btn" type="button">See Portfolio</button>
         <button class="right-btn" type="button">Contact Me</button>
@@ -90,9 +88,8 @@
       </div>
     </section>
     <section id=contact>
-      <h2>Contact</h2>
+      <h2>Contact & Links</h2>
       <div id="contact-container">
-
         <button type="button">Email</button>
         <button type="button">Linkedin</button>
         <button type="button">Git</button>
@@ -100,6 +97,10 @@
     </section>
 
   </main>
+
+  <footer role="footer">
+    ©2025 Created by Benjamin Berg 
+  </footer>
 
   <script type="module" src="/main.js"></script>
 </body>
