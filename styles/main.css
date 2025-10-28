@@ -66,9 +66,19 @@ section{
   width: 12rem;
   /* height: 10rem; */
   /* flex-wrap: wrap; */
-
 }
 
+#porfolio-container{
+  display: flex;
+  gap: 1rem;
+}
+
+.portfolio-box{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+
+}
 
 h1,
 h2,

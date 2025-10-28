@@ -11,22 +11,27 @@
 
 <body>
   <header role="banner">
-    <a>Benajmin Berg</a>
-    <a>About</a>
-    <a>Skills</a>
-    <a>Portfolio</a>
-    <a>Contact & Links</a>
+    <a href="#intro">Benajmin Berg</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact & Links</a>
   </header>
   <main>
     <section id=intro>
       <!-- <div>Hi! I'm Benny</div> -->
       <h1>Hi! I'm Benny</h1>
       <p>Computer Science student @HUJI</p>
-      <div>
+      <!-- <div>
         <a href="#projects">Projects</a> ·
         <a href="#contact">Contact</a> ·
         <a href="/Benjamin_Berg_CV.pdf" download>CV</a>
+      </div> -->
+      <div class="btn-container">
+        <button class="left-btn" type="button">See Portfolio</button>
+        <button class="right-btn" type="button">Contact Me</button>
       </div>
+
 
     </section>
     <section id=about>
@@ -69,19 +74,29 @@
       <div id="portfolio-container">
         <div class="portfolio-box">
           <h3>Paper Rock Scissors</h3>
+          <img src="/images/rock-paper-scissors.png" alt="Rock Paper Scissors">
+          <p>Play Rock Paper Scissors against the computer! Implemented with HTML, CSS and JavaScript.</p>
         </div>
         <div class="portfolio-box">
           <h3>Etch-A-Sketch</h3>
+          <img src="/images/etch-a-sketch.png" alt="Etch-A-Sketch">
+          <p>Use your mouse to draw a picture! Implemented with HTML, CSS and JavaScript.</p>
+          <div class="btn-container">
+            <button class="left-btn" type="button">Live Site</button>
+            <button class="right-btn" type="button">Code</button>
+          </div>
         </div>
       </div>
       </div>
     </section>
     <section id=contact>
       <h2>Contact</h2>
+      <div id="contact-container">
 
-      <a>Email</a>
-      <a>Linkedin</a>
-      <a>Git</a>
+        <button type="button">Email</button>
+        <button type="button">Linkedin</button>
+        <button type="button">Git</button>
+      </div>
     </section>
 
   </main>
